@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  angular-app:
+    build: fe/angular
+    ports: 
+      - "4200:80"  
+
+  java-app:
+    build: be/java
+    ports:
+      - "8085:8085"    
+    
