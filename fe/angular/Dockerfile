@@ -9,5 +9,9 @@ RUN npm run build --prod
 
 #Stage2
 FROM nginx:1.20.1
+RUN apt-get update
+RUN apt-get install apache2-utils -y
+RUN (echo 'qburst123'; echo 'qburst123') | htpasswd -c /etc/nginx/.htpasswd qburst
 COPY --from=build-step /app/dist/ng-docker-example /usr/share/nginx/html
-EXPOSE 4200:80
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 4201:80

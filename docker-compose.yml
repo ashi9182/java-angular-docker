@@ -3,7 +3,7 @@ services:
   angular-app:
     build: fe/angular
     ports: 
-      - "4200:80"  
+      - "4201:80"  
 
   java-app:
     build: be/java
