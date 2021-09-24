@@ -15,4 +15,5 @@ RUN (echo 'qburst123'; echo 'qburst123') | htpasswd -c /etc/nginx/.htpasswd qbur
 COPY /dist/ng-docker-example /usr/share/nginx/html
 RUN mkdir /etc/nginx/certs
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+VOLUME /etc/nginx/certs
 EXPOSE 80
