@@ -5,7 +5,8 @@ services:
     volumes: 
       - /etc/letsencrypt/live/xwep-truck.qburst.build:/etc/nginx/certs
     ports: 
-      - "80:80"  
+      - "80:80" 
+      - "443:443" 
 
   java-app:
     build: be/java
