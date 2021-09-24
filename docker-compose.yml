@@ -2,11 +2,13 @@ version: "3.3"
 services:
   angular-app:
     build: fe/angular
+    volumes: 
+      - /etc/letsencrypt/live/xwep-truck.qburst.build:/etc/nginx/certs
     ports: 
       - "80:80"  
 
   java-app:
     build: be/java
     ports:
-      - "8080:8085"    
+      - "8080:8080"    
     
