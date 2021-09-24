@@ -14,6 +14,5 @@ RUN apt-get install apache2-utils -y
 RUN (echo 'qburst123'; echo 'qburst123') | htpasswd -c /etc/nginx/.htpasswd qburst
 COPY /dist/ng-docker-example /usr/share/nginx/html
 RUN mkdir /etc/nginx/certs
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-VOLUME /etc/nginx/certs
+COPY nginx_backup.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
