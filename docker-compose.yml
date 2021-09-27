@@ -3,7 +3,7 @@ services:
   angular-app:
     build: fe/angular
     volumes: 
-      - /etc/letsencrypt/live/xwep-truck.qburst.build:/etc/nginx/certs
+      - /etc/letsencrypt:/etc/nginx/certs
     ports: 
       - "80:80" 
       - "443:443" 
